@@ -766,10 +766,6 @@ public abstract class JettyServerHelper extends HttpServerHelper
 
 		if( h2 )
 		{
-			// This will throw an exception if protocol negotiation is not
-			// available
-			NegotiatingServerConnectionFactory.checkProtocolNegotiationAvailable();
-
 			// ALPN negotiator
 			negotiator = createDynamically( "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory", "" );
 		}
